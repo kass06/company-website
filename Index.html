@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make it spark electric Company</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home">
+        <div class="hero-container">
+            <h1>Powering Your Future</h1>
+            <p>Reliable electric solutions for residential, commercial, and renewable energy needs.</p>
+            <button onclick="window.location.href='#contact'">Get a Quote</button>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-item">
+                <h3>Residential</h3>
+                <p>Efficient electrical solutions for homes</p>
+            </div>
+            <div class="service-item">
+                <h3>Commercial</h3>
+                <p>Tailored electrical services for businesses</p>
+            </div>
+            <div class="service-item">
+                <h3>Renewable Energy</h3>
+                <p>Green energy options for sustainable living</p>
+            </div>
+            <div class="service-item">
+                <h3>Emergency Services</h3>
+                <p>24/7 support for electrical issues</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="#" method="POST">
+            <input type="text" name="name" placeholder="Your name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="text" name="phone" placeholder="Your Phone">
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="contact-info">
+            <p>Phone: +011 055 383 19</p>
+            <p>Email: info@makeitspark.com</p>
+            <div id="map"></div> <!-- Google Maps integration -->
+        </div>
+    </section>
+
+    
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+<script>
+  function initMap() {
+    var companyLocation = {lat: 30.748817, lng: -73.985428}; // Example location
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 15,
+      center: companyLocation
+    });
+    var marker = new google.maps.Marker({
+      position: companyLocation,
+      map: map
+    });
+  }
+</script>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <div class="social-icons">
+          <a href="#" target="_blank" title="Facebook">
+              <i class="fab fa-facebook-f"></i> <!-- Facebook Icon -->
+          </a>
+          <a href="#" target="_blank" title="Twitter">
+              <i class="fab fa-twitter"></i> <!-- Twitter Icon -->
+          </a>
+          <a href="#" target="_blank" title="Instagram">
+              <i class="fab fa-instagram"></i> <!-- Instagram Icon -->
+          </a>
+          <a href="#" target="_blank" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i> <!-- LinkedIn Icon -->
+          </a>
+      </div>
+  </div>
+</footer>
+
+</body>
+</html>
